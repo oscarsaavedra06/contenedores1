@@ -1,0 +1,2 @@
+﻿docker run --rm --volumes-from drupalcontainer-postgres-1 -v -v c:\dbbackup:/backup ubuntu bash -c "cd /var/lib/postgresql/data && tar xvf /backup/backup.tar --strip 1"
+docker run --rm --volumes-from drupalcontainer-drupal-1 -v -v c:\dbbackup:/backup ubuntu bash -c "cd /var/www/html && tar xvf /backup/backup.tar --strip 1"
